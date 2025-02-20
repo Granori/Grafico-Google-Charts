@@ -93,7 +93,7 @@
                 // by = - ax - c
                 // y = - (ax + c) / b
                 if (document.formGrafico.tipo.value == "retta") {
-                    for (let i = -10; i <= 10; i++) {
+                    for (let i = -100; i <= 100; i++) {
                         if (b == 0) {
                             // ax + c = 0
                             // x = - c / a
@@ -118,7 +118,7 @@
                 // y = ax^2 + bx + c
                 else if (document.formGrafico.tipo.value == "parabola") {
                     if (a != 0) {
-                        for (let i = -10; i <= 10; i++) {
+                        for (let i = -100; i <= 100; i++) {
                             try {
                                 y = a*Math.pow(i, 2) + b*i + c;
                                 console.log(y);
@@ -134,16 +134,20 @@
                 }
         
                 let opzioni = {
-                    title: 'Grafico Google Charts',
+                    title: 'Grafico Charts',
                     hAxis: { 
                         title: 'Ascissa',
-                        minValue: -10,
-                        maxValue: 10
+                        viewWindow: {
+                            min: -100,
+                            max: 100
+                        }
                     },
                     vAxis: { 
                         title: 'Ordinata',
-                        minValue: -10,
-                        maxValue: 10
+                        viewWindow: {
+                            min: -100,
+                            max: 100
+                        }
                     },
                     legend: 'none'
                 };
@@ -161,16 +165,20 @@
                 dati.addColumn('number', 'Y');
 
                 let opzioni = {
-                    title: 'Grafico Google Chart',
+                    title: 'Grafico Google Charts',
                     hAxis: { 
                         title: 'Ascissa',
-                        minValue: -10,
-                        maxValue: 10
+                        viewWindow: {
+                            min: -100,
+                            max: 100
+                        }
                     },
                     vAxis: { 
                         title: 'Ordinata',
-                        minValue: -10,
-                        maxValue: 10
+                        viewWindow: {
+                            min: -100,
+                            max: 100
+                        }
                     },
                     legend: 'none'
                 };
